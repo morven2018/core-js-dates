@@ -31,8 +31,9 @@ function dateToTimestamp(date) {
  * Date(2023, 5, 1, 8, 20, 55) => '08:20:55'
  * Date(2015, 10, 20, 23, 15, 1) => '23:15:01'
  */
-function getTime(date) {
-  return date.toLocaleTimeString();
+function getTime(/* date */) {
+  throw new Error('Not implemented');
+  // return date.toLocaleTimeString();
 }
 
 /**
@@ -45,9 +46,10 @@ function getTime(date) {
  * '01 Jan 1970 00:00:00 UTC' => 'Thursday'
  * '03 Dec 1995 00:12:00 UTC' => 'Sunday'
  * '2024-01-30T00:00:00.000Z' => 'Tuesday'
+ * +
  */
-function getDayName(/* date */) {
-  /* const initDate = new Date(date);
+function getDayName(date) {
+  const initDate = new Date(date);
   const weekday = [
     'Sunday',
     'Monday',
@@ -57,8 +59,7 @@ function getDayName(/* date */) {
     'Friday',
     'Saturday',
   ];
-  return weekday[initDate.getDay()]; */
-  throw new Error('Not implemented');
+  return weekday[initDate.getDay()];
 }
 
 /**
