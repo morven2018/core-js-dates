@@ -254,7 +254,7 @@ module.exports = {
   getDayName,
   getNextFriday,
   getCountDaysInMonth,
-  getCountDaysOnPeriod,
+  // getCountDaysOnPeriod,
   isDateInPeriod,
   formatDate,
   getCountWeekendsInMonth,
