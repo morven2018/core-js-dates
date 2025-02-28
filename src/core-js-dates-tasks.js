@@ -47,7 +47,7 @@ function getTime(date) {
  * '2024-01-30T00:00:00.000Z' => 'Tuesday'
  */
 function getDayName(date) {
-  const initDate = new Date(date);
+  /* const initDate = new Date(date);
   const weekday = [
     'Sunday',
     'Monday',
@@ -57,7 +57,8 @@ function getDayName(date) {
     'Friday',
     'Saturday',
   ];
-  return weekday[initDate.getDay()];
+  return weekday[initDate.getDay()];*/
+  throw new Error('Not implemented');
 }
 
 /**
@@ -70,13 +71,13 @@ function getDayName(date) {
  * Date('2024-02-03T00:00:00Z') => Date('2024-02-09T00:00:00Z')
  * Date('2024-02-13T00:00:00Z') => Date('2024-02-16T00:00:00Z')
  * Date('2024-02-16T00:00:00Z') => Date('2024-02-23T00:00:00Z')
+ * +
  */
-function getNextFriday(/* date */) {
-  /* const weekday = date.getDay();
+function getNextFriday(date) {
+  const weekday = date.getDay();
   const delta = weekday < 5 ? 5 - weekday : 7 - weekday + 5;
   const res = new Date(date.setDate(date.getDate() + delta));
-  return res; */
-  throw new Error('Not implemented');
+  return res;
 }
 
 /**
@@ -104,6 +105,7 @@ function getCountDaysInMonth(month, year) {
  * @example:
  * '2024-02-01T00:00:00.000Z', '2024-02-02T00:00:00.000Z'  => 2
  * '2024-02-01T00:00:00.000Z', '2024-02-12T00:00:00.000Z'  => 12
+ * +
  */
 function getCountDaysOnPeriod(dateStart, dateEnd) {
   const res = Math.floor(
