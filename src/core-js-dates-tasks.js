@@ -78,7 +78,6 @@ function getNextFriday(/* date */) {
   return res; */
   throw new Error('Not implemented');
 }
-}
 
 /**
  * Returns the number of days in a specified month and year.
@@ -110,7 +109,7 @@ function getCountDaysOnPeriod(dateStart, dateEnd) {
   const res = Math.floor(
     (Date.parse(dateEnd) - Date.parse(dateStart)) / (1000 * 60 * 60 * 24)
   );
-  return res + 1; 
+  return res + 1;
 }
 
 /**
