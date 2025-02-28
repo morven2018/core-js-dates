@@ -57,7 +57,7 @@ function getDayName(date) {
     'Friday',
     'Saturday',
   ];
-  return weekday[initDate.getDay()];*/
+  return weekday[initDate.getDay()]; */
   throw new Error('Not implemented');
 }
 
